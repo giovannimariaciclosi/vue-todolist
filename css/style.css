@@ -3,3 +3,69 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: sans-serif;
+}
+
+#list-container {
+  margin: 2em auto 0;
+  width: 400px;
+  background-color: #fce289;
+  padding: 2em;
+  border-radius: 20px;
+}
+
+#list-container h1 {
+  text-align: center;
+  padding: 1em 0;
+}
+
+#list-container ul {
+  padding-bottom: 1em;
+}
+
+#list-container li {
+  padding-bottom: 0.8em;
+  list-style-type:none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#list-container #list-text {
+  font-size: 1.1em;
+}
+
+#list-container #list-close {
+  background-color: red;
+  display: flex;
+  padding: 4px 8px;
+  border-radius: 50%;
+}
+
+#list-container button {
+  padding: 5px 10px;
+}
+
+#list-container #input-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 2em;
+}
+
+#input-container input {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 1em;
+}
+
+#input-container button {
+  border-radius: 5px;
+  border: transparent;
+  background-color: black;
+  color: #fce289;
+  font-weight: bold;
+  font-size: 1em;
+}

@@ -13,24 +13,28 @@
 
     <div id="app">
 
-      <h1>To Do List</h1>
+      <div id="list-container">
+        <h1>To Do List</h1>
+  
+        <ul>
+          <li v-for="(todo, index) in todos">
+            <!-- metodo 1 -->
+            <!-- <span @click=" (todo.done == false)  ? (todo.done = true) ? (todo.done == true) : (todo.done = false) : (todo.done = '') " :style=" todo.done ? donestyle : notdonestyle ">{{ todo.text }}</span> -->
+  
+            <!-- metodo 2 -->
+            <span @click="toggleDone(index)" :style=" todo.done ? donestyle : notdonestyle " id="list-text">{{ todo.text }}</span>
+            <span @click="deleteTodo(index)" id="list-close">&#10005;</span>
+          </li>
+        </ul>
+        
+        <div id="input-container">
+          <input v-model="newTodo.text" @keyup.enter="addTodo()" id="input" type="text" placeholder="Inserisci nuovo task">
+          <button @click="addTodo()">Aggiungi</button>
+        </div>
 
-      <ul>
-        <li v-for="(todo, index) in todos">
-          <!-- metodo 1 -->
-          <!-- <span @click=" (todo.done == false)  ? (todo.done = true) ? (todo.done == true) : (todo.done = false) : (todo.done = '') " :style=" todo.done ? donestyle : notdonestyle ">{{ todo.text }}</span> -->
-
-          <!-- metodo 2 -->
-          <span @click="toggleDone(index)" :style=" todo.done ? donestyle : notdonestyle ">{{ todo.text }}</span>
-          <span @click="deleteTodo(index)">  X</span>
-        </li>
-      </ul>
-
-      <input v-model="newTodo.text" @keyup.enter="addTodo()" id="input" type="text">
-      <button @click="addTodo()">Aggiungi</button>
+      </div>
       
     </div>
-    
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>
 </body>

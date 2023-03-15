@@ -46,7 +46,7 @@ createApp({
       donestyle:
         {
           textDecoration: "line-through",
-          // color: "red",
+          color: "red",
         },
 
       notdonestyle: 
