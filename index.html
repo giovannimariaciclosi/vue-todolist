@@ -17,7 +17,11 @@
 
       <ul>
         <li v-for="(todo, index) in todos">
-          <span :style=" todo.done ? donestyle : notdonestyle ">{{ todo.text }}</span>
+          <!-- metodo 1 -->
+          <!-- <span @click=" (todo.done == false)  ? (todo.done = true) ? (todo.done == true) : (todo.done = false) : (todo.done = '') " :style=" todo.done ? donestyle : notdonestyle ">{{ todo.text }}</span> -->
+
+          <!-- metodo 2 -->
+          <span @click="toggleDone(index)" :style=" todo.done ? donestyle : notdonestyle ">{{ todo.text }}</span>
           <span @click="deleteTodo(index)">  X</span>
         </li>
       </ul>

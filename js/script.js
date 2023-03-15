@@ -24,13 +24,13 @@ createApp({
       todos: [
         {
           text: "Finire l'esercizio del giorno",
-          done: true,
+          done: false,
         }, {
           text: 'Preparare il pranzo',
-          done: true,
+          done: false,
         }, {
           text: 'Andare in palestra',
-          done: true,
+          done: false,
         }, {
           text: 'Buttare la spazzatura',
           done: false,
@@ -83,6 +83,18 @@ createApp({
         done: false,
       };
       // console.log(this.newTodo);
+    },
+
+    toggleDone(toDoIndex) {
+
+
+     if (this.todos[toDoIndex].done == false) {
+        this.todos[toDoIndex].done = true;
+        console.log(this.todos[toDoIndex].done);
+      } else if (this.todos[toDoIndex].done == true) {
+        this.todos[toDoIndex].done = false;
+        console.log(this.todos[toDoIndex].done);
+      };
     },
   },
 
