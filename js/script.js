@@ -58,6 +58,12 @@ createApp({
 
   methods: {
 
+    deleteTodo(toDoIndex) {
+
+      this.todos.splice(toDoIndex, 1);
+      // console.log(toDoIndex);
+
+    },
   },
 
 
