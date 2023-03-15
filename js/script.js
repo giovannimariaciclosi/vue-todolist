@@ -33,15 +33,26 @@ createApp({
           done: true,
         }, {
           text: 'Buttare la spazzatura',
-          done: true,
+          done: false,
         }, {
           text: 'Fare la lavatrice',
-          done: true,
+          done: false,
         }, {
           text: 'Idratarsi',
-          done: true,
+          done: false,
         }
       ],
+
+      donestyle:
+        {
+          textDecoration: "line-through",
+          // color: "red",
+        },
+
+      notdonestyle: 
+        {
+          // color: "green",
+        },
     }
   },
 
