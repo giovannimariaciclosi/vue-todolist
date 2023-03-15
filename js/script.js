@@ -53,6 +53,12 @@ createApp({
         {
           // color: "green",
         },
+
+        newTodo: {
+          text: "",
+          done: false,
+        },
+
     }
   },
 
@@ -63,6 +69,20 @@ createApp({
       this.todos.splice(toDoIndex, 1);
       // console.log(toDoIndex);
 
+    },
+
+    addTodo() {
+
+      // creo una variabile così che i nuovi todo inseriti nell'array non vengano sovrascritti al variare di newTodo
+      this.createTodo = this.newTodo;
+
+      this.todos.push(this.createTodo);
+
+      this.newTodo = {
+        text: "",
+        done: false,
+      };
+      // console.log(this.newTodo);
     },
   },
 

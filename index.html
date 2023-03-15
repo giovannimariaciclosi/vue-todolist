@@ -21,6 +21,9 @@
           <span @click="deleteTodo(index)">  X</span>
         </li>
       </ul>
+
+      <input v-model="newTodo.text" @keyup.enter="addTodo()" id="input" type="text">
+      <button @click="addTodo()">Aggiungi</button>
       
     </div>
     
